@@ -110,17 +110,5 @@
     </div>
   </div>
   <script src="../_common/nav.js"></script>
-  <script>
-    // After expanding, redirect to f1-4 for the static expanded view
-    document.addEventListener("DOMContentLoaded", function () {
-      var header = document.querySelector(".archive-group__header");
-      if (header) {
-        header.addEventListener("click", function () {
-          // Brief delay so the user sees the expand animation, then navigate
-          setTimeout(function () { window.location.href = "f1-4.html"; }, 180);
-        });
-      }
-    });
-  </script>
 </body>
 </html>
