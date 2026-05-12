@@ -435,7 +435,7 @@
 
 .archive-group__body {
   display: none;
-  padding: 0 0 16px;
+  padding: 16px 0;
   border-top: 1px solid var(--stroke-primary);
 }
 
