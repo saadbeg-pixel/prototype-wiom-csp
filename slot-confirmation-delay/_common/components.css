@@ -678,7 +678,7 @@
    when there's no natural in-app CTA. */
 .next-pill {
   position: absolute;
-  bottom: 36px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--icon-warning);
