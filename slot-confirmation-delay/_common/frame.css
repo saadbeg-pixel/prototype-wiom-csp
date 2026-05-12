@@ -7,6 +7,7 @@
 body {
   background: linear-gradient(180deg, #efeaf3 0%, #e6dfee 100%);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,6 +156,7 @@ body {
   .phone-bezel {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     border-radius: 0;
     padding: 0;
     box-shadow: none;
