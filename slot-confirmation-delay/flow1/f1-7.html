@@ -25,7 +25,7 @@
     .tap-hint::before { content: "↑ "; color: var(--brand-primary); }
     .toast-prototype {
       position: absolute;
-      top: 96px;
+      bottom: 56px;
       left: 16px;
       right: 16px;
       background: var(--state-positive);
@@ -36,10 +36,16 @@
       font-weight: var(--w-semibold);
       z-index: 200;
       box-shadow: 0 4px 12px rgba(0, 128, 67, 0.25);
-      animation: toast-in 0.3s ease-out;
+      animation: toast-in 0.3s ease-out, toast-out 0.4s ease-in 3s forwards;
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+    @keyframes toast-out {
+      to {
+        opacity: 0;
+        transform: translateY(16px);
+      }
     }
   </style>
 </head>
