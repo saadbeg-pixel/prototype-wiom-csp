@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>फ्लो 3 पूरा · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .branch-card {
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: var(--radius-card);
+      padding: 14px 16px; margin-top: 12px;
+    }
+    .branch-card__heading {
+      font-size: var(--t-body-lg);
+      font-weight: var(--w-bold);
+      color: var(--text-primary);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .branch-card__body {
+      font-size: var(--t-body);
+      line-height: 20px; color: var(--text-primary);
+      margin-top: 8px;
+    }
+    .recap-hero {
+      font-size: 26px; font-weight: var(--w-bold); line-height: 32px;
+      margin-top: 12px; color: var(--text-primary);
+    }
+    .pill-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: var(--w-bold);
+    }
+    .pill-tag--back { background: var(--bg-positive); color: var(--state-positive); }
+    .pill-tag--cancel { background: var(--bg-negative); color: var(--state-negative); }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 3 · end — recap (both branches)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar yellow"><span>10:31</span><span class="status-icons">●●● 􀙇 88%</span></div>
+      <div class="screen-content yellow">
+        <div class="context">
+          <span class="context__step">फ्लो 3 पूरा</span>
+          <h1 class="recap-hero">पार्टनर को एक ब्रेक मिला — फिर भी फैसला उसका</h1>
+
+          <p class="context__body" style="margin-top: 16px">
+            एक छोटा बॉटम शीट काफ़ी है · पार्टनर रुकता है, सोचता है, और चुनता है।
+          </p>
+
+          <div class="branch-card">
+            <div class="branch-card__heading">
+              <span class="pill-tag pill-tag--back">वापस</span>
+              <span>पार्टनर ने इंतज़ार चुना</span>
+            </div>
+            <div class="branch-card__body">
+              ड्रिलडाउन वापस पहले जैसा · टोस्ट कन्फ़र्म करता है · कार्ड आर्काइव में रहता है।
+            </div>
+          </div>
+
+          <div class="branch-card">
+            <div class="branch-card__heading">
+              <span class="pill-tag pill-tag--cancel">फिर भी रद्द</span>
+              <span>पार्टनर ने रद्द ही किया</span>
+            </div>
+            <div class="branch-card__body">
+              पुराना "व्योम को वापस क्यों" शीट खुलता है · पार्टनर कारण चुनता है ·
+              कार्ड व्योम के पास वापस। हमने उसे रोका नहीं — सिर्फ़ एक confirmation जोड़ा।
+            </div>
+          </div>
+
+          <div class="context__spacer"></div>
+          <button class="btn btn--primary btn--full context__cta context__cta--brand" data-goto="../context/idx.html">
+            शुरू से देखें →
+          </button>
+        </div>
+      </div>
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

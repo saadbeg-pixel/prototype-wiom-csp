@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>ड्रिल — कार्ड · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .drill-body { padding: 0 16px 24px; }
+    .timeline-row { display: flex; gap: 12px; padding: 8px 0; }
+    .timeline-row__text { flex: 1; font-size: var(--t-body-sm); color: var(--text-secondary); line-height: 18px; }
+    .timeline-row__time { font-size: var(--t-meta); color: var(--text-secondary); white-space: nowrap; }
+    .schedule-row { display: flex; justify-content: space-between; align-items: center; }
+    .schedule-row__main { display: flex; flex-direction: column; gap: 2px; }
+    .schedule-row__label { font-size: var(--t-body-sm); color: var(--text-secondary); }
+    .schedule-row__value { font-size: var(--t-body); color: var(--text-primary); font-weight: var(--w-semibold); }
+    .pending-pill {
+      background: var(--bg-info); color: var(--state-info);
+      font-size: var(--t-body-sm); font-weight: var(--w-semibold);
+      padding: 4px 10px; border-radius: var(--radius-cta);
+    }
+    .bonus-line {
+      margin-top: 12px; padding: 10px 12px;
+      background: var(--bg-positive); border-radius: 8px;
+      font-size: var(--t-body); color: var(--state-positive);
+      display: flex; align-items: center; gap: 8px; line-height: 18px;
+    }
+    .tap-pulse {
+      position: relative;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { background: transparent; }
+      50% { background: rgba(217, 0, 141, 0.18); }
+    }
+    .tap-hint {
+      position: absolute; top: 96px; right: 8px;
+      background: var(--brand-primary); color: var(--text-inverse);
+      padding: 6px 10px; border-radius: 8px;
+      font-size: 11px; font-weight: var(--w-semibold);
+      pointer-events: none; letter-spacing: 0.3px;
+    }
+    .tap-hint::after {
+      content: ""; position: absolute; top: -5px; right: 14px;
+      border: 5px solid transparent; border-bottom-color: var(--brand-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 3 · f3-2 — drilldown (kebab visible)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>10:30</span><span class="status-icons">●●● 􀙇 88%</span></div>
+      <div class="screen-content app">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-goto="f3-1.html">←</button>
+          <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
+          <button class="top-bar__icon-btn tap-pulse" data-goto="f3-3.html">⋮</button>
+        </div>
+
+        <div class="tap-hint">यहाँ टैप करें</div>
+
+        <div class="drill-body">
+
+          <div class="banner banner--info">
+            <div class="banner__icon-circle">⏳</div>
+            <div class="banner__body">
+              <div class="banner__title">हम कनेक्शन से समय पूछ रहे हैं</div>
+              <div class="banner__subtitle">जवाब आते ही आपको बताएंगे · बोनस पर असर नहीं</div>
+            </div>
+          </div>
+
+          <div class="bonus-line">
+            <span>✓</span>
+            <span>जब तक कनेक्शन जवाब नहीं देता, बोनस सुरक्षित है</span>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">⊙</span>
+              <span class="section__title">अपडेट</span>
+            </div>
+            <div class="section__content">
+              <div class="timeline-row">
+                <span class="timeline-row__text">कनेक्शन को 14 मई का सुझाव भेजा</span>
+                <span class="timeline-row__time">आज 8 AM</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">13 मई का स्लॉट निकल गया</span>
+                <span class="timeline-row__time">कल</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📅</span>
+              <span class="section__title">कब तक करना है?</span>
+            </div>
+            <div class="section__content">
+              <div class="schedule-row">
+                <div class="schedule-row__main">
+                  <span class="schedule-row__label">अब सुझाया गया स्लॉट</span>
+                  <span class="schedule-row__value">14 मई</span>
+                </div>
+                <span class="pending-pill">पेंडिंग है</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="height: 16px"></div>
+        </div>
+      </div>
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

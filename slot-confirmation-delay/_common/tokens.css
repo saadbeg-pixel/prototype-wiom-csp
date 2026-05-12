@@ -1,0 +1,150 @@
+/* ─────────────────────────────────────────────────────────────
+   Wiom CSP — Design Tokens
+   Extracted verbatim from core/common/theme/WiomTokens.kt
+   ────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Brand ── */
+  --brand-primary: #D9008D;
+  --brand-secondary: #4A1535;
+  --brand-tint: #FFE5F6;
+  --brand-stroke: #FFB2E4;
+  --brand-selection: #FFCCED;
+  --brand-primary-pressed: #A30070;
+
+  /* ── Text ── */
+  --text-primary: #161021;
+  --text-secondary: #5C5570;
+  --text-hint: #A7A1B2;
+  --text-inverse: #FFFFFF;
+  --text-on-brand: #FFFFFF;
+  --text-on-warning: #372902;
+
+  /* ── Backgrounds ── */
+  --bg-screen: #FAF9FC;
+  --bg-surface: #FFFFFF;
+  --bg-secondary: #E8E4F0;
+  --bg-subtle: #F1EDF7;
+  --bg-disabled: #D7D3E0;
+  --bg-brand-tint: #FFE5F6;
+  --bg-overdue: #FFE5E7;
+  --bg-urgent: #FFF2BF;
+  --bg-positive: #E1FAED;
+  --bg-negative: #FFE5E7;
+  --bg-warning: #FFF2BF;
+  --bg-caution: #FFF8E1;
+  --bg-info: #F1E5FF;
+  --dialog-bg: #F7F5FA;
+  --input-field-bg: #FAF8FC;
+
+  /* ── State / Semantic ── */
+  --state-positive: #008043;
+  --state-negative: #D92130;
+  --state-warning: #B85C00;
+  --state-caution: #E65100;
+  --state-info: #6D17CE;
+  --icon-warning: #E2B203;
+
+  /* ── Strokes ── */
+  --stroke-primary: #E8E4F0;
+  --stroke-secondary: #D7D3E0;
+  --stroke-focus: #352D42;
+  --stroke-brand: #FFB2E4;
+  --accent-default: #D7D3E0;
+
+  /* ── Context screen yellow (for the prototype's yellow story screens) ── */
+  --context-bg: #FFF2BF;        /* same as bg-urgent */
+  --context-bg-deep: #FFE082;   /* hover/accent variant */
+
+  /* ── Spacing (4dp grid) ── */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xxl: 24px;
+  --space-huge: 32px;
+  --space-sheet-cta: 48px;
+  --space-card-padding: 16px;
+  --space-inter-card: 16px;
+
+  /* ── Radius ── */
+  --radius-tiny: 4px;
+  --radius-chip: 8px;
+  --radius-card: 12px;
+  --radius-cta: 16px;
+  --radius-large: 16px;
+  --radius-dialog: 24px;
+
+  /* ── Component dimensions ── */
+  --header-h: 64px;
+  --btn-h: 52px;
+  --card-border-w: 1px;
+  --accent-border-w: 4px;
+  --banner-icon-circle: 36px;
+  --banner-icon-glyph: 18px;
+  --confirm-circle: 120px;
+  --confirm-icon: 48px;
+  --icon-xs: 16px;
+  --icon-sm: 20px;
+  --icon-md: 24px;
+  --icon-lg: 48px;
+
+  /* ── Typography sizes ── */
+  --t-hero: 32px;
+  --t-heading: 24px;
+  --t-title-lg: 20px;
+  --t-title-sm: 16px;
+  --t-body-lg: 16px;
+  --t-body: 14px;
+  --t-body-sm: 12px;
+  --t-meta: 10px;
+
+  /* ── Font weights ── */
+  --w-bold: 700;
+  --w-semibold: 600;
+  --w-medium: 500;
+  --w-regular: 400;
+
+  /* ── Line heights ── */
+  --lh-hero: 40px;
+  --lh-heading: 32px;
+  --lh-title-lg: 28px;
+  --lh-title-sm: 24px;
+  --lh-body-lg: 24px;
+  --lh-body: 24px;
+  --lh-body-sm: 20px;
+  --lh-meta: 16px;
+}
+
+/* ── Reset & base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  font-family: "Noto Sans Devanagari", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: var(--t-body);
+  font-weight: var(--w-regular);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: var(--brand-primary);
+  text-decoration: none;
+}

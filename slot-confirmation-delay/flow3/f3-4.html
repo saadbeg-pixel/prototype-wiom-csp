@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>रुकिए — हम कोशिश कर रहे हैं · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .drill-body { padding: 0 16px 24px; }
+    .banner__placeholder, .section__placeholder, .bonus-line {
+      opacity: 0.4;
+    }
+    .bonus-line {
+      margin-top: 12px; padding: 10px 12px;
+      background: var(--bg-positive); border-radius: 8px;
+      font-size: var(--t-body); color: var(--state-positive);
+      display: flex; align-items: center; gap: 8px; line-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 3 · f3-4 — reassurance sheet</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>10:30</span><span class="status-icons">●●● 􀙇 88%</span></div>
+      <div class="screen-content app">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-inert>←</button>
+          <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
+          <button class="top-bar__icon-btn" data-inert>⋮</button>
+        </div>
+
+        <div class="drill-body">
+          <div class="banner banner--info banner__placeholder">
+            <div class="banner__icon-circle">⏳</div>
+            <div class="banner__body">
+              <div class="banner__title">हम कनेक्शन से समय पूछ रहे हैं</div>
+              <div class="banner__subtitle">जवाब आते ही आपको बताएंगे · बोनस पर असर नहीं</div>
+            </div>
+          </div>
+          <div class="bonus-line">
+            <span>✓</span>
+            <span>जब तक कनेक्शन जवाब नहीं देता, बोनस सुरक्षित है</span>
+          </div>
+        </div>
+
+        <!-- Reassurance bottom sheet — WiomConfirmBottomSheet pattern -->
+        <div class="sheet-scrim" data-inert>
+          <div class="sheet sheet--confirm">
+            <div class="sheet__illustration sheet__illustration--info">
+              <span style="font-size: 56px; line-height: 1">⏳</span>
+            </div>
+            <div class="sheet__title">रुकिए — हम कोशिश कर रहे हैं</div>
+            <div class="sheet__body">
+              हम कनेक्शन से <strong>14 मई</strong> के लिए बात कर रहे हैं।
+              जवाब आते ही आप काम शुरू कर सकते हैं — तब तक आपके
+              <strong>बोनस पर असर नहीं</strong> होगा।
+            </div>
+            <div style="display: flex; gap: 12px; width: 100%">
+              <button class="btn btn--secondary" style="flex: 1" data-goto="f3-5a.html">वापस</button>
+              <button class="btn btn--destructive" style="flex: 1" data-goto="f3-5b.html">फिर भी रद्द करें</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

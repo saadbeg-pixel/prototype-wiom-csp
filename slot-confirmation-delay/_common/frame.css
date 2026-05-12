@@ -1,0 +1,173 @@
+/* ─────────────────────────────────────────────────────────────
+   Mobile Frame — 360×800 inner viewport
+   Phone-shaped wrapper for desktop viewing.
+   On a real phone, the .phone-bezel + .phone-notch are hidden.
+   ────────────────────────────────────────────────────────────── */
+
+body {
+  background: linear-gradient(180deg, #efeaf3 0%, #e6dfee 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.phone-bezel {
+  width: 380px;
+  height: 820px;
+  background: #1a1424;
+  border-radius: 44px;
+  padding: 10px;
+  box-shadow:
+    0 24px 48px rgba(22, 16, 33, 0.25),
+    0 8px 16px rgba(22, 16, 33, 0.15),
+    inset 0 0 0 2px #2b2334;
+  position: relative;
+}
+
+.phone-screen {
+  width: 360px;
+  height: 800px;
+  background: var(--bg-screen);
+  border-radius: 36px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 24px;
+  background: #1a1424;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+/* Status bar — mock time + icons. Light variant for dark headers, dark variant for light bg. */
+.status-bar {
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 0 28px;
+  font-size: 13px;
+  font-weight: var(--w-semibold);
+  position: relative;
+  z-index: 50;
+}
+
+.status-bar.light {
+  color: var(--text-inverse);
+  background: var(--brand-secondary);
+}
+
+.status-bar.dark {
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.status-bar.yellow {
+  color: var(--text-primary);
+  background: var(--context-bg);
+}
+
+.status-bar .status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+/* Bottom gesture bar — Android pill */
+.nav-bar {
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.nav-bar .pill {
+  width: 108px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--text-primary);
+  opacity: 0.4;
+}
+
+.nav-bar.on-dark .pill {
+  background: var(--text-inverse);
+  opacity: 0.6;
+}
+
+/* Screen content — the actual UI area */
+.screen-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.screen-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Variants by tone */
+.screen-content.yellow {
+  background: var(--context-bg);
+}
+
+.screen-content.app {
+  background: var(--bg-screen);
+}
+
+/* Desktop hint — outside the frame */
+.frame-hint {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-family: ui-monospace, "SF Mono", monospace;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* On narrow viewports — collapse frame to fullscreen */
+@media (max-width: 420px) {
+  body {
+    padding: 0;
+    background: var(--bg-screen);
+  }
+  .phone-bezel {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .phone-notch {
+    display: none;
+  }
+  .frame-hint {
+    display: none;
+  }
+}

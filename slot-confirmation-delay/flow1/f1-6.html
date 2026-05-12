@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>लॉक स्क्रीन · नोटिफ़िकेशन</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .tap-hint {
+      position: absolute;
+      bottom: 60px;
+      left: 16px;
+      right: 16px;
+      text-align: center;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      pointer-events: none;
+      letter-spacing: 0.3px;
+    }
+    .tap-hint::before { content: "↑ "; }
+    .pn--tappable {
+      cursor: pointer;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .pn--tappable:active {
+      transform: scale(0.98);
+      background: rgba(40, 30, 55, 0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 1 · f1-6 — lockscreen PN</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light" style="background: transparent; color: #fff">
+        <span>2:15</span>
+        <span class="status-icons" style="color: #fff">●●● 􀙇 84%</span>
+      </div>
+      <div class="screen-content app" style="background: transparent">
+        <div class="lockscreen">
+          <span class="lockscreen__date">शुक्रवार · 14 मई</span>
+          <span class="lockscreen__time">2:15</span>
+
+          <div class="lockscreen__notifs">
+            <div class="pn pn--tappable" data-goto="f1-7.html">
+              <div class="pn__icon">W</div>
+              <div class="pn__body">
+                <div class="pn__app">
+                  <span>Wiom · पार्टनर</span>
+                  <span class="pn__app-time">अभी</span>
+                </div>
+                <div class="pn__title">कनेक्शन ने समय पक्का किया!</div>
+                <div class="pn__text">14 मई का स्लॉट कन्फ़र्म हुआ · अब टीम चुनें</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tap-hint">नोटिफ़िकेशन पर टैप करें</div>
+        </div>
+      </div>
+      <div class="nav-bar on-dark"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

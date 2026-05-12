@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>ड्रिल — स्लॉट कन्फ़र्म · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .drill-body { padding: 0 16px 24px; }
+    .timeline-row { display: flex; gap: 12px; padding: 8px 0; }
+    .timeline-row__text { flex: 1; font-size: var(--t-body-sm); color: var(--text-secondary); line-height: 18px; }
+    .timeline-row__text.is-new {
+      color: var(--text-primary);
+      background: var(--bg-brand-tint);
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin: -4px 0;
+    }
+    .timeline-row__time { font-size: var(--t-meta); color: var(--text-secondary); white-space: nowrap; }
+    .schedule-row { display: flex; justify-content: space-between; align-items: center; }
+    .schedule-row__main { display: flex; flex-direction: column; gap: 2px; }
+    .schedule-row__label { font-size: var(--t-body-sm); color: var(--text-secondary); }
+    .schedule-row__value { font-size: var(--t-body); color: var(--text-primary); font-weight: var(--w-semibold); }
+    .confirmed-pill {
+      background: var(--bg-positive);
+      color: var(--state-positive);
+      font-size: var(--t-body-sm);
+      font-weight: var(--w-semibold);
+      padding: 4px 10px;
+      border-radius: var(--radius-cta);
+    }
+    .next-pill {
+      position: absolute;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text-primary);
+      color: var(--text-inverse);
+      padding: 10px 16px;
+      border-radius: 24px;
+      font-size: var(--t-body-sm);
+      font-weight: var(--w-semibold);
+      z-index: 40;
+      box-shadow: 0 4px 12px rgba(22, 16, 33, 0.3);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 1 · f1-8 — drilldown (slot confirmed)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>2:15</span><span class="status-icons">●●● 􀙇 84%</span></div>
+      <div class="screen-content app" style="display: flex; flex-direction: column">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-inert>←</button>
+          <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
+          <button class="top-bar__icon-btn" data-inert>⋮</button>
+        </div>
+
+        <div class="drill-body" style="flex: 1; overflow-y: auto">
+
+          <!-- Banner: POSITIVE green (SLOT_CONFIRMED) -->
+          <div class="banner banner--positive">
+            <div class="banner__icon-circle">✓</div>
+            <div class="banner__body">
+              <div class="banner__title">स्लॉट पक्का हुआ</div>
+              <div class="banner__subtitle">अब टीम चुनना है</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">⊙</span>
+              <span class="section__title">अपडेट</span>
+              <span class="card__badge">1</span>
+            </div>
+            <div class="section__content">
+              <div class="timeline-row">
+                <span class="timeline-row__text is-new">कनेक्शन ने 14 मई का स्लॉट कन्फ़र्म किया</span>
+                <span class="timeline-row__time">अभी</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">कनेक्शन को 14 मई का सुझाव भेजा</span>
+                <span class="timeline-row__time">आज सुबह 8 बजे</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">13 मई का स्लॉट निकल गया · कोई जवाब नहीं</span>
+                <span class="timeline-row__time">कल 11:59 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">ⓘ</span>
+              <span class="section__title">ज़रूरी जानकारी</span>
+            </div>
+            <div class="section__content">
+              <div class="section__row-value">#4821 · INSTALL</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📍</span>
+              <span class="section__title">कहाँ जाना है?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__row-value">
+                G 69, मातामंदिर, तीसरी गली<br/>
+                सेक्टर 22, द्वारका, नई दिल्ली — 110077
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📅</span>
+              <span class="section__title">कब तक करना है?</span>
+            </div>
+            <div class="section__content">
+              <div class="schedule-row">
+                <div class="schedule-row__main">
+                  <span class="schedule-row__label">स्लॉट</span>
+                  <span class="schedule-row__value">14 मई</span>
+                </div>
+                <span class="confirmed-pill">कन्फर्म है</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">👤</span>
+              <span class="section__title">कौन करेगा?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__hint">अभी तक किसी को नहीं दिया गया</div>
+            </div>
+          </div>
+
+          <div style="height: 16px"></div>
+        </div>
+
+        <!-- Sticky CTA bar (state has CTA now) -->
+        <div class="cta-bar">
+          <button class="btn btn--primary btn--full" data-inert>टीम को भेजें</button>
+        </div>
+
+        <button class="next-pill" data-goto="f1-end.html">कहानी पूरी देखें →</button>
+      </div>
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

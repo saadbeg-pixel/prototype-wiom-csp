@@ -16,3 +16,6 @@ dist/
 
 # Logs
 *.log
+
+# Claude Code (local agent state)
+.claude/

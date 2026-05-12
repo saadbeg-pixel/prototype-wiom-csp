@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>स्लॉट कन्फ़र्मेशन में देरी · Wiom CSP Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="_common/tokens.css" />
+  <link rel="stylesheet" href="_common/frame.css" />
+  <link rel="stylesheet" href="_common/components.css" />
+  <style>
+    /* Cover-specific overrides */
+    .cover-story-card {
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      margin-top: 24px;
+    }
+
+    .cover-story-card .context__story {
+      margin-top: 0;
+    }
+
+    .cover-hero {
+      font-size: 28px;
+      font-weight: var(--w-bold);
+      line-height: 36px;
+      color: var(--text-primary);
+      margin-top: 12px;
+    }
+
+    .cover-prototype-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: var(--w-bold);
+      letter-spacing: 1px;
+      color: var(--state-caution);
+      text-transform: uppercase;
+    }
+
+    .cover-prototype-tag::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--state-caution);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">slot-confirmation-delay · cover (1 of …)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar yellow">
+        <span>9:41</span>
+        <span class="status-icons">●●● 􀙇 100%</span>
+      </div>
+
+      <div class="screen-content yellow">
+        <div class="context">
+          <span class="cover-prototype-tag">Prototype · UX Review</span>
+          <h1 class="cover-hero">
+            कनेक्शन ने स्लॉट कन्फ़र्म नहीं किया · पार्टनर क्या देखे?
+          </h1>
+          <p class="context__body">
+            जब पार्टनर एक स्लॉट भेजता है और कनेक्शन देर तक जवाब नहीं देता —
+            दिन निकल जाता है, स्लॉट की तारीख पुरानी हो जाती है, और कोई नहीं
+            जानता आगे क्या होगा।
+          </p>
+
+          <div class="cover-story-card">
+            <div class="context__story">
+              <div class="context__story-row">
+                <span class="context__story-date">12 मई</span>
+                <span class="context__story-text">
+                  पार्टनर ने <strong>13 मई</strong> का स्लॉट भेजा।
+                </span>
+              </div>
+              <div class="context__story-row">
+                <span class="context__story-date">13 मई</span>
+                <span class="context__story-text">
+                  कनेक्शन ने जवाब नहीं दिया। स्लॉट का दिन निकल गया।
+                </span>
+              </div>
+              <div class="context__story-row">
+                <span class="context__story-date">14 मई</span>
+                <span class="context__story-text">
+                  अभी भी "13 मई" दिख रहा है — गलत तारीख, और पार्टनर परेशान।
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="context__spacer"></div>
+
+          <button class="btn btn--primary btn--full context__cta context__cta--brand" data-goto="context/c1.html">
+            देखें क्या सोचा है →
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-bar">
+        <span class="pill"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="_common/nav.js"></script>
+</body>
+</html>
