@@ -678,7 +678,8 @@
    when there's no natural in-app CTA. */
 .next-pill {
   position: absolute;
-  bottom: 80px;
+  bottom: 100px;                                    /* fallback */
+  bottom: calc(100px + env(safe-area-inset-bottom)); /* iOS home indicator + Chrome toolbar buffer */
   left: 50%;
   transform: translateX(-50%);
   background: var(--icon-warning);
