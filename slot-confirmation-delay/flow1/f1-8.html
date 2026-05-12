@@ -34,21 +34,6 @@
       padding: 4px 10px;
       border-radius: var(--radius-cta);
     }
-    .next-pill {
-      position: absolute;
-      bottom: 90px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--text-primary);
-      color: var(--text-inverse);
-      padding: 10px 16px;
-      border-radius: 24px;
-      font-size: var(--t-body-sm);
-      font-weight: var(--w-semibold);
-      z-index: 40;
-      box-shadow: 0 4px 12px rgba(22, 16, 33, 0.3);
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -150,12 +135,10 @@
           <div style="height: 16px"></div>
         </div>
 
-        <!-- Sticky CTA bar (state has CTA now) -->
+        <!-- Sticky CTA bar — real-app button, wired to advance the prototype -->
         <div class="cta-bar">
-          <button class="btn btn--primary btn--full" data-inert>टीम को भेजें</button>
+          <button class="btn btn--primary btn--full" data-goto="f1-end.html">टीम को भेजें</button>
         </div>
-
-        <button class="next-pill" data-goto="f1-end.html">कहानी पूरी देखें →</button>
       </div>
       <div class="nav-bar"><span class="pill"></span></div>
     </div>

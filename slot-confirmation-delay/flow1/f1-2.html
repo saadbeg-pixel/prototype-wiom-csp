@@ -52,21 +52,6 @@
       font-size: var(--t-body);
       margin-top: 4px;
     }
-    .next-pill {
-      position: absolute;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--text-primary);
-      color: var(--text-inverse);
-      padding: 10px 16px;
-      border-radius: 24px;
-      font-size: var(--t-body-sm);
-      font-weight: var(--w-semibold);
-      z-index: 40;
-      box-shadow: 0 4px 12px rgba(22, 16, 33, 0.3);
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -185,9 +170,9 @@
           <div style="height: 72px"></div>
         </div>
 
-        <!-- Prototype nav (not in real app) -->
-        <button class="next-pill" data-goto="../context/f1-yc2.html">अगला फ्रेम — एक दिन बीत गया →</button>
       </div>
+      <!-- Prototype nav (sibling of .screen-content so it doesn't scroll) -->
+      <button class="next-pill" data-goto="../context/f1-yc2.html">Next — ek din beet gaya →</button>
       <div class="nav-bar"><span class="pill"></span></div>
     </div>
   </div>
