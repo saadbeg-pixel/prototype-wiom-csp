@@ -625,40 +625,51 @@
   background: var(--bg-subtle);
 }
 
-/* ═══ ASSURANCE STRIP (compact stub on home — not the focus) ═══ */
+/* ═══ ASSURANCE STRIP (2×2 grid matching real app) ═══ */
 .strip {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
   padding: 16px;
-  overflow-x: auto;
 }
-
-.strip::-webkit-scrollbar { display: none; }
 
 .chip {
-  flex-shrink: 0;
-  padding: 12px;
   background: var(--bg-surface);
   border: 1px solid var(--stroke-primary);
-  border-radius: var(--radius-chip);
-  min-width: 96px;
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.chip__value {
-  font-size: var(--t-title-lg);
-  font-weight: var(--w-bold);
-  line-height: 32px;
-  color: var(--text-primary);
+  gap: 8px;
+  min-height: 84px;
+  justify-content: flex-start;
 }
 
 .chip__label {
-  font-size: var(--t-body-sm);
-  font-weight: var(--w-semibold);
-  letter-spacing: 0.3px;
+  font-size: var(--t-body);
+  font-weight: var(--w-regular);
   color: var(--text-secondary);
+  line-height: 20px;
+}
+
+.chip__value {
+  font-size: 22px;
+  font-weight: var(--w-bold);
+  line-height: 28px;
+  color: var(--text-primary);
+}
+
+.chip__sub {
+  font-size: var(--t-body);
+  font-weight: var(--w-regular);
+  color: var(--text-secondary);
+  margin-left: 4px;
+}
+
+.chip__check {
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--text-hint);
 }
 
 /* ═══ TOAST ═══ */
