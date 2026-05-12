@@ -35,8 +35,8 @@
       animation: pulse 1.4s ease-in-out infinite;
     }
     @keyframes pulse {
-      0%, 100% { background: transparent; }
-      50% { background: rgba(217, 0, 141, 0.18); }
+      0%, 100% { background: transparent; box-shadow: 0 0 0 0 rgba(217, 0, 141, 0); }
+      50% { background: rgba(217, 0, 141, 0.28); box-shadow: 0 0 0 3px rgba(217, 0, 141, 0.18); }
     }
     .tap-hint {
       position: absolute; top: 96px; right: 8px;
@@ -64,8 +64,6 @@
           <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
           <button class="top-bar__icon-btn tap-pulse" data-goto="f3-3.html">⋮</button>
         </div>
-
-        <div class="tap-hint">यहाँ टैप करें</div>
 
         <div class="drill-body">
 
