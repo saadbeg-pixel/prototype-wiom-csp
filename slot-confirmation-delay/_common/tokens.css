@@ -53,8 +53,8 @@
   --accent-default: #D7D3E0;
 
   /* ── Context screen yellow (for the prototype's yellow story screens) ── */
-  --context-bg: #FFF2BF;        /* same as bg-urgent */
-  --context-bg-deep: #FFE082;   /* hover/accent variant */
+  --context-bg: #FFD966;        /* punchier yellow — distinct from pale bg-urgent so story screens read as "different mode" */
+  --context-bg-deep: #FFC93C;   /* hover/accent variant */
 
   /* ── Spacing (4dp grid) ── */
   --space-xs: 4px;
