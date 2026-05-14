@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>ड्रिल — स्लॉट भेजें · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .drill-body { padding: 0 16px 24px; }
+    .timeline-row { display: flex; gap: 12px; padding: 8px 0; }
+    .timeline-row__text { flex: 1; font-size: var(--t-body-sm); color: var(--text-secondary); line-height: 18px; }
+    .timeline-row__time { font-size: var(--t-meta); color: var(--text-secondary); white-space: nowrap; }
+    .map-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      color: var(--brand-primary); font-size: var(--t-body); margin-top: 4px;
+    }
+    .tap-hint {
+      position: absolute; bottom: 90px; left: 16px; right: 16px;
+      text-align: center; font-size: 11px; color: var(--text-secondary);
+      pointer-events: none; letter-spacing: 0.3px;
+    }
+    .tap-hint::before { content: "↓ "; color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 1 · f1-p2 — drilldown (slot needed)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>9:41</span><span class="status-icons">●●● 􀙇 100%</span></div>
+      <div class="screen-content app">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-inert>←</button>
+          <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
+          <button class="top-bar__icon-btn" data-inert>⋮</button>
+        </div>
+
+        <div class="drill-body">
+
+          <div class="banner banner--warning">
+            <div class="banner__icon-circle">📅</div>
+            <div class="banner__body">
+              <div class="banner__title">कनेक्शन को स्लॉट भेजें</div>
+              <div class="banner__subtitle">नया इंस्टॉलेशन · अभी कोई स्लॉट प्रस्तावित नहीं किया गया</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">⊙</span>
+              <span class="section__title">अपडेट</span>
+            </div>
+            <div class="section__content">
+              <div class="timeline-row">
+                <span class="timeline-row__text">नया इंस्टॉलेशन रिक्वेस्ट मिला</span>
+                <span class="timeline-row__time">9:41 AM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">ⓘ</span>
+              <span class="section__title">ज़रूरी जानकारी</span>
+            </div>
+            <div class="section__content">
+              <div class="section__row-value">#4821 · INSTALL</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📍</span>
+              <span class="section__title">कहाँ जाना है?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__row-value">
+                G 69, मातामंदिर, तीसरी गली<br/>
+                सेक्टर 22, द्वारका, नई दिल्ली — 110077
+              </div>
+              <a class="map-link" data-inert>🗺 मैप पर देखें</a>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📞</span>
+              <span class="section__title">संपर्क कैसे करें?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__hint">स्लॉट कन्फ़र्म के बाद उपलब्ध होगा</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📅</span>
+              <span class="section__title">कब तक करना है?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__hint">अभी स्लॉट भेजा नहीं गया है</div>
+            </div>
+          </div>
+
+          <div style="height: 80px"></div>
+        </div>
+
+      </div>
+
+      <div class="tap-hint">नीचे CTA दबाएँ</div>
+
+      <div class="cta-bar">
+        <button class="btn btn--primary btn--full" data-goto="f1-p3.html">
+          स्लॉट प्रस्तावित करें
+        </button>
+      </div>
+
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

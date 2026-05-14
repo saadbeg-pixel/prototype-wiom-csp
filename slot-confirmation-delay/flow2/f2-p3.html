@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>स्लॉट चुनें · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .drill-body { padding: 0 16px 24px; }
+    .timeline-row { display: flex; gap: 12px; padding: 8px 0; }
+    .timeline-row__text { flex: 1; font-size: var(--t-body-sm); color: var(--text-secondary); line-height: 18px; }
+    .timeline-row__time { font-size: var(--t-meta); color: var(--text-secondary); white-space: nowrap; }
+    .date-option {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px; margin-bottom: 12px;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--stroke-primary);
+      border-radius: var(--radius-card);
+    }
+    .date-option--selected {
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 1px var(--brand-primary) inset;
+    }
+    .date-option__radio {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid var(--stroke-secondary);
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    }
+    .date-option--selected .date-option__radio { border-color: var(--brand-primary); }
+    .date-option--selected .date-option__radio::after {
+      content: ""; width: 10px; height: 10px;
+      border-radius: 50%; background: var(--brand-primary);
+    }
+    .date-option__body { flex: 1; }
+    .date-option__day {
+      font-size: var(--t-body-lg);
+      font-weight: var(--w-semibold);
+      color: var(--text-primary);
+    }
+    .date-option__date {
+      font-size: var(--t-body-sm);
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .tap-hint {
+      position: absolute; bottom: 12px; left: 16px; right: 16px;
+      text-align: center; font-size: 11px; color: var(--text-secondary);
+      pointer-events: none; letter-spacing: 0.3px;
+      z-index: 250;
+    }
+    .tap-hint::before { content: "↓ "; color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 2 · f2-p3 — slot picker sheet</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>9:42</span><span class="status-icons">●●● 􀙇 100%</span></div>
+      <div class="screen-content app">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-inert>←</button>
+          <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
+          <button class="top-bar__icon-btn" data-inert>⋮</button>
+        </div>
+
+        <div class="drill-body">
+          <div class="banner banner--warning">
+            <div class="banner__icon-circle">📅</div>
+            <div class="banner__body">
+              <div class="banner__title">कनेक्शन को स्लॉट भेजें</div>
+              <div class="banner__subtitle">नया इंस्टॉलेशन · अभी कोई स्लॉट प्रस्तावित नहीं किया गया</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">⊙</span>
+              <span class="section__title">अपडेट</span>
+            </div>
+            <div class="section__content">
+              <div class="timeline-row">
+                <span class="timeline-row__text">नया इंस्टॉलेशन रिक्वेस्ट मिला</span>
+                <span class="timeline-row__time">9:41 AM</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="height: 200px"></div>
+        </div>
+
+      </div>
+
+      <div class="sheet-scrim">
+        <div class="sheet">
+          <div class="sheet__handle"></div>
+          <div class="sheet__title">स्लॉट चुनें</div>
+
+          <div class="date-option" data-inert>
+            <span class="date-option__radio"></span>
+            <div class="date-option__body">
+              <div class="date-option__day">आज</div>
+              <div class="date-option__date">12 मई, सोमवार</div>
+            </div>
+          </div>
+
+          <div class="date-option date-option--selected" data-inert>
+            <span class="date-option__radio"></span>
+            <div class="date-option__body">
+              <div class="date-option__day">कल</div>
+              <div class="date-option__date">13 मई, मंगलवार</div>
+            </div>
+          </div>
+
+          <div style="height: 16px"></div>
+          <button class="btn btn--primary btn--full" data-goto="f2-p4.html">
+            स्लॉट प्रस्तावित करें
+          </button>
+        </div>
+      </div>
+
+      <div class="tap-hint">'स्लॉट प्रस्तावित करें' दबाएँ</div>
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

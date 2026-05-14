@@ -12,35 +12,27 @@
   <link rel="stylesheet" href="../_common/components.css" />
   <style>
     .tap-hint {
-      position: absolute;
-      bottom: 24px;
-      left: 16px;
-      right: 16px;
-      text-align: center;
-      font-size: 11px;
-      color: var(--text-secondary);
-      pointer-events: none;
-      letter-spacing: 0.3px;
+      position: absolute; bottom: 24px; left: 16px; right: 16px;
+      text-align: center; font-size: 11px; color: var(--text-secondary);
+      pointer-events: none; letter-spacing: 0.3px;
     }
     .tap-hint::before { content: "↑ "; color: var(--brand-primary); }
   </style>
 </head>
 <body>
-  <div class="frame-hint">flow 1 · f1-1 — home (active)</div>
+  <div class="frame-hint">flow 1 · f1-p1 — home (slot needed)</div>
   <div class="phone-bezel">
     <div class="phone-notch"></div>
     <div class="phone-screen">
       <div class="status-bar light"><span>9:41</span><span class="status-icons">●●● 􀙇 100%</span></div>
       <div class="screen-content app">
 
-        <!-- Top bar -->
         <div class="top-bar">
           <button class="top-bar__icon-btn" data-inert>☰</button>
           <span class="top-bar__title">साद · पार्टनर</span>
           <button class="top-bar__icon-btn" data-inert>🔔</button>
         </div>
 
-        <!-- Assurance strip — 2×2 grid -->
         <div class="strip">
           <div class="chip" data-inert>
             <span class="chip__label">कनेक्शन</span>
@@ -60,26 +52,24 @@
           </div>
         </div>
 
-        <!-- The card we care about — INSTALL · AWAITING_CUSTOMER_SELECTION -->
         <div style="margin-top: 8px">
-          <div class="card" data-goto="f1-2.html">
+          <div class="card" data-goto="f1-p2.html">
             <div class="card__accent"></div>
             <div class="card__body">
               <div class="card__line1">
                 <span class="card__icon">🏠</span>
                 <span>इंस्टॉलेशन · #4821</span>
                 <span class="card__locality"> · सेक्टर 22</span>
-                <span class="card__badge">1</span>
+                <span class="card__badge">नया</span>
               </div>
               <div class="card__line2">
-                <span class="card__reason">समय कन्फ़र्म होना बाकी · 13 मई</span>
-                <span class="card__timestamp">कल 6:42 PM</span>
+                <span class="card__reason">कनेक्शन को स्लॉट भेजें</span>
+                <span class="card__timestamp">अभी</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- A second inert card to make the home feel real -->
         <div style="margin-top: 16px">
           <div class="card" data-inert>
             <div class="card__accent"></div>
@@ -98,8 +88,7 @@
         </div>
 
         <div style="height: 80px"></div>
-
-        <div class="tap-hint">कार्ड पर टैप करें</div>
+        <div class="tap-hint">इंस्टॉलेशन कार्ड पर टैप करें</div>
       </div>
       <div class="nav-bar"><span class="pill"></span></div>
     </div>

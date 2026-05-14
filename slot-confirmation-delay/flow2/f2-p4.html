@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  <title>ड्रिल — कन्फ़र्मेशन का इंतज़ार · Wiom CSP</title>
+  <title>स्लॉट भेजा गया · Wiom CSP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,57 +12,32 @@
   <link rel="stylesheet" href="../_common/components.css" />
   <style>
     .drill-body { padding: 0 16px 24px; }
-    .timeline-row {
-      display: flex;
-      gap: 12px;
-      padding: 8px 0;
-    }
-    .timeline-row__text {
-      flex: 1;
-      font-size: var(--t-body-sm);
-      color: var(--text-secondary);
-      line-height: 18px;
-    }
-    .timeline-row__time {
-      font-size: var(--t-meta);
-      color: var(--text-secondary);
-      white-space: nowrap;
-    }
-    .schedule-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .timeline-row { display: flex; gap: 12px; padding: 8px 0; }
+    .timeline-row__text { flex: 1; font-size: var(--t-body-sm); color: var(--text-secondary); line-height: 18px; }
+    .timeline-row__time { font-size: var(--t-meta); color: var(--text-secondary); white-space: nowrap; }
+    .schedule-row { display: flex; justify-content: space-between; align-items: center; }
     .schedule-row__main { display: flex; flex-direction: column; gap: 2px; }
     .schedule-row__label { font-size: var(--t-body-sm); color: var(--text-secondary); }
     .schedule-row__value { font-size: var(--t-body); color: var(--text-primary); font-weight: var(--w-semibold); }
     .pending-pill {
-      background: var(--bg-subtle);
-      color: var(--text-secondary);
-      font-size: var(--t-body-sm);
-      font-weight: var(--w-semibold);
-      padding: 4px 10px;
-      border-radius: var(--radius-cta);
+      background: var(--bg-subtle); color: var(--text-secondary);
+      font-size: var(--t-body-sm); font-weight: var(--w-semibold);
+      padding: 4px 10px; border-radius: var(--radius-cta);
     }
     .map-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      color: var(--brand-primary);
-      font-size: var(--t-body);
-      margin-top: 4px;
+      display: inline-flex; align-items: center; gap: 4px;
+      color: var(--brand-primary); font-size: var(--t-body); margin-top: 4px;
     }
   </style>
 </head>
 <body>
-  <div class="frame-hint">flow 1 · f1-2 — drilldown (awaiting customer)</div>
+  <div class="frame-hint">flow 2 · f2-p4 — drilldown (slot sent, awaiting)</div>
   <div class="phone-bezel">
     <div class="phone-notch"></div>
     <div class="phone-screen">
-      <div class="status-bar light"><span>9:41</span><span class="status-icons">●●● 􀙇 100%</span></div>
+      <div class="status-bar light"><span>9:43</span><span class="status-icons">●●● 􀙇 100%</span></div>
       <div class="screen-content app">
 
-        <!-- Top bar -->
         <div class="top-bar">
           <button class="top-bar__icon-btn" data-inert>←</button>
           <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
@@ -71,16 +46,14 @@
 
         <div class="drill-body">
 
-          <!-- Banner: INFO purple (AWAITING_CUSTOMER_SELECTION) -->
           <div class="banner banner--info">
             <div class="banner__icon-circle">⏳</div>
             <div class="banner__body">
               <div class="banner__title">इंस्टॉलेशन का समय कन्फर्म हो रहा है</div>
-              <div class="banner__subtitle">एक समय भेजा है · कनेक्शन से जवाब का इंतज़ार</div>
+              <div class="banner__subtitle">स्लॉट भेजा गया · कनेक्शन से जवाब का इंतज़ार</div>
             </div>
           </div>
 
-          <!-- §2 Updates -->
           <div class="section">
             <div class="section__header">
               <span class="section__icon">⊙</span>
@@ -90,16 +63,15 @@
             <div class="section__content">
               <div class="timeline-row">
                 <span class="timeline-row__text">स्लॉट भेजा गया — 13 मई</span>
-                <span class="timeline-row__time">कल 6:42 PM</span>
+                <span class="timeline-row__time">अभी</span>
               </div>
               <div class="timeline-row">
-                <span class="timeline-row__text">कनेक्शन को इंस्टॉलेशन रिक्वेस्ट मिली</span>
-                <span class="timeline-row__time">कल 5:30 PM</span>
+                <span class="timeline-row__text">नया इंस्टॉलेशन रिक्वेस्ट मिला</span>
+                <span class="timeline-row__time">9:41 AM</span>
               </div>
             </div>
           </div>
 
-          <!-- §3 Briefing -->
           <div class="section">
             <div class="section__header">
               <span class="section__icon">ⓘ</span>
@@ -110,7 +82,6 @@
             </div>
           </div>
 
-          <!-- §4 Location -->
           <div class="section">
             <div class="section__header">
               <span class="section__icon">📍</span>
@@ -125,7 +96,6 @@
             </div>
           </div>
 
-          <!-- §4b Contact -->
           <div class="section">
             <div class="section__header">
               <span class="section__icon">📞</span>
@@ -136,7 +106,6 @@
             </div>
           </div>
 
-          <!-- §5 Schedule -->
           <div class="section">
             <div class="section__header">
               <span class="section__icon">📅</span>
@@ -151,12 +120,11 @@
                 <span class="pending-pill">पेंडिंग है</span>
               </div>
               <div class="section__hint" style="margin-top: 8px">
-                कनेक्शन के कन्फर्मेशन का इंतज़ार है
+                कनेक्शन के कन्फ़र्मेशन का इंतज़ार है
               </div>
             </div>
           </div>
 
-          <!-- §6 Executor -->
           <div class="section">
             <div class="section__header">
               <span class="section__icon">👤</span>
@@ -167,12 +135,12 @@
             </div>
           </div>
 
-          <div style="height: 72px"></div>
+          <div style="height: 96px"></div>
         </div>
 
       </div>
-      <!-- Prototype nav (sibling of .screen-content so it doesn't scroll) -->
-      <button class="next-pill" data-goto="../context/f1-yc2.html">Next — ek din beet gaya →</button>
+
+      <button class="next-pill" data-goto="../context/f2-yc-mid.html">Next — आगे क्या हुआ →</button>
       <div class="nav-bar"><span class="pill"></span></div>
     </div>
   </div>

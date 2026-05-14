@@ -37,7 +37,13 @@ index.html                    ← problem statement
   ↓
 context/idx.html              ← pick a flow
   ↓
-[Flow 1 / 2 / 3]              ← all return to idx
+context/fX-yc-pre.html        ← "Send a slot to connection"
+  ↓
+flowX/fX-p1 ... p4            ← home → drilldown → picker → sent (slot-send opener)
+  ↓
+context/fX-yc-mid.html        ← "Day passed, no response"
+  ↓
+[Flow-specific resolution]    ← all return to idx
 ```
 
 Each flow ends with a yellow recap and a "next flow" CTA back to the index.

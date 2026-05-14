@@ -66,12 +66,14 @@
       ]
     },
     {
-      label: "Flow 1 — Customer responds",
+      label: "Flow 1 — Customer replies late",
       items: [
-        { key: "context/f1-yc1", name: "Setup · 12 May evening", type: "yellow" },
-        { key: "flow1/f1-1", name: "Home · active feed", type: "app" },
-        { key: "flow1/f1-2", name: "Drilldown · awaiting customer", type: "app" },
-        { key: "context/f1-yc2", name: "Story · a day passed", type: "yellow" },
+        { key: "context/f1-yc-pre", name: "Setup · send a slot", type: "yellow" },
+        { key: "flow1/f1-p1", name: "Home · slot needed", type: "app" },
+        { key: "flow1/f1-p2", name: "Drilldown · slot needed", type: "app" },
+        { key: "flow1/f1-p3", name: "Slot picker sheet", type: "app" },
+        { key: "flow1/f1-p4", name: "Drilldown · slot sent", type: "app" },
+        { key: "context/f1-yc-mid", name: "Story · day passed", type: "yellow" },
         { key: "flow1/f1-3", name: "Home · archive bar", type: "app" },
         { key: "flow1/f1-4", name: "Home · archive expanded", type: "app" },
         { key: "flow1/f1-5", name: "Drilldown · in archive", type: "app" },
@@ -83,9 +85,14 @@
       ]
     },
     {
-      label: "Flow 2 — Customer doesn't respond",
+      label: "Flow 2 — Customer goes silent",
       items: [
-        { key: "context/f2-yc1", name: "Setup · 3 days passed", type: "yellow" },
+        { key: "context/f2-yc-pre", name: "Setup · send a slot", type: "yellow" },
+        { key: "flow2/f2-p1", name: "Home · slot needed", type: "app" },
+        { key: "flow2/f2-p2", name: "Drilldown · slot needed", type: "app" },
+        { key: "flow2/f2-p3", name: "Slot picker sheet", type: "app" },
+        { key: "flow2/f2-p4", name: "Drilldown · slot sent", type: "app" },
+        { key: "context/f2-yc-mid", name: "Story · 3 days passed", type: "yellow" },
         { key: "flow2/f2-1", name: "Home · archive (day 3)", type: "app" },
         { key: "flow2/f2-2", name: "Drilldown · final try", type: "app" },
         { key: "context/f2-yc2", name: "Story · booking removed", type: "yellow" },
@@ -97,6 +104,12 @@
     {
       label: "Flow 3 — Partner cancel attempt",
       items: [
+        { key: "context/f3-yc-pre", name: "Setup · send a slot", type: "yellow" },
+        { key: "flow3/f3-p1", name: "Home · slot needed", type: "app" },
+        { key: "flow3/f3-p2", name: "Drilldown · slot needed", type: "app" },
+        { key: "flow3/f3-p3", name: "Slot picker sheet", type: "app" },
+        { key: "flow3/f3-p4", name: "Drilldown · slot sent", type: "app" },
+        { key: "context/f3-yc-mid", name: "Story · day passed", type: "yellow" },
         { key: "flow3/f3-1", name: "Home · archive", type: "app" },
         { key: "flow3/f3-2", name: "Drilldown · kebab visible", type: "app" },
         { key: "flow3/f3-3", name: "Drilldown · kebab open", type: "app" },
