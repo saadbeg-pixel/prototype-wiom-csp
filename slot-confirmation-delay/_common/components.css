@@ -719,12 +719,19 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ═══ PUSH NOTIFICATION (lock-screen mock) ═══ */
-.lockscreen {
-  flex: 1;
+/* ═══ PUSH NOTIFICATION (lock-screen mock) ═══
+   Gradient lives on .phone-screen.is-lockscreen so it fills the full
+   frame (including status-bar and nav-bar zones) instead of leaving
+   white strips above and below the .screen-content area. */
+.phone-screen.is-lockscreen {
   background:
     linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.55) 100%),
     linear-gradient(135deg, #2c1a3d 0%, #4a1535 50%, #1a1424 100%);
+}
+
+.lockscreen {
+  flex: 1;
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
