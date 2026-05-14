@@ -290,9 +290,9 @@ slot-confirmation-delay/
 │   └── nav.js         ← simple click-to-next + back nav
 ├── context/
 │   ├── idx.html       ← flow index
-│   ├── f1-yc-pre.html, f1-yc-mid.html, f1-yc2/yc3.html, f1-end.html (Flow 1 yellow)
-│   ├── f2-yc-pre.html, f2-yc-mid.html, f2-yc2.html, f2-end.html (Flow 2 yellow)
-│   └── f3-yc-pre.html, f3-yc-mid.html, f3-end.html (Flow 3 yellow)
+│   ├── f1-yc-pre.html, f1-yc-mid.html, f1-yc2.html, f1-yc3.html (Flow 1 yellow)
+│   ├── f2-yc-pre.html, f2-yc-mid.html, f2-yc2.html (Flow 2 yellow)
+│   └── f3-yc-pre.html, f3-yc-mid.html (Flow 3 yellow)
 ├── flow1/             ← Flow 1 app screens (mobile-framed)
 │   ├── f1-p1.html ... f1-p4.html (slot-send opener: home, drilldown, picker, sent)
 │   └── f1-3.html ... f1-8.html (post-day-passed: late reply story)

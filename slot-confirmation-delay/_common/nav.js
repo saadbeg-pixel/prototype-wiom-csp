@@ -80,8 +80,7 @@
         { key: "context/f1-yc3", name: "Story · customer responded", type: "yellow" },
         { key: "flow1/f1-6", name: "Lockscreen · push notification", type: "app" },
         { key: "flow1/f1-7", name: "Home · slot confirmed", type: "app" },
-        { key: "flow1/f1-8", name: "Drilldown · slot confirmed", type: "app" },
-        { key: "flow1/f1-end", name: "Flow 1 recap", type: "yellow" }
+        { key: "flow1/f1-8", name: "Drilldown · slot confirmed", type: "app" }
       ]
     },
     {
@@ -97,8 +96,7 @@
         { key: "flow2/f2-2", name: "Drilldown · final try", type: "app" },
         { key: "context/f2-yc2", name: "Story · booking removed", type: "yellow" },
         { key: "flow2/f2-3", name: "Lockscreen · booking removed", type: "app" },
-        { key: "flow2/f2-4", name: "Home · card removed", type: "app" },
-        { key: "flow2/f2-end", name: "Flow 2 recap", type: "yellow" }
+        { key: "flow2/f2-4", name: "Home · card removed", type: "app" }
       ]
     },
     {
@@ -115,8 +113,7 @@
         { key: "flow3/f3-3", name: "Drilldown · kebab open", type: "app" },
         { key: "flow3/f3-4", name: "Reassurance bottom sheet", type: "app" },
         { key: "flow3/f3-5a", name: "Drilldown · sheet closed", type: "app" },
-        { key: "flow3/f3-5b", name: "Exit reason sheet", type: "app" },
-        { key: "flow3/f3-end", name: "Flow 3 recap", type: "yellow" }
+        { key: "flow3/f3-5b", name: "Exit reason sheet", type: "app" }
       ]
     }
   ];
