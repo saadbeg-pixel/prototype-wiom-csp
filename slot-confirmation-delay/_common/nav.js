@@ -94,8 +94,10 @@
         { key: "context/f2-yc-mid", name: "Story · 3 days passed", type: "yellow" },
         { key: "flow2/f2-1", name: "Home · archive (day 3)", type: "app" },
         { key: "flow2/f2-2", name: "Drilldown · final try", type: "app" },
-        { key: "context/f2-yc2", name: "Story · booking removed", type: "yellow" },
-        { key: "flow2/f2-3", name: "Lockscreen · booking removed", type: "app" },
+        { key: "context/f2-yc2", name: "Story · removal incoming", type: "yellow" },
+        { key: "flow2/f2-3", name: "Lockscreen · PN", type: "app" },
+        { key: "flow2/f2-5", name: "Drilldown · removal warning", type: "app" },
+        { key: "flow2/f2-6", name: "Home · card flagged", type: "app" },
         { key: "flow2/f2-4", name: "Home · card removed", type: "app" }
       ]
     },

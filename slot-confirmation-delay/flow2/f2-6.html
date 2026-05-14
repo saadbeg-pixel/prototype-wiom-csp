@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>होम — हटाई जा रही है · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .tap-hint {
+      position: absolute; bottom: 24px; left: 16px; right: 16px;
+      text-align: center; font-size: 11px; color: var(--text-secondary);
+      pointer-events: none; letter-spacing: 0.3px;
+    }
+    .tap-hint::before { content: "↑ "; color: var(--brand-primary); }
+    .card__badge--warn {
+      background: var(--bg-negative);
+      color: var(--state-negative);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 2 · f2-6 — home (card marked for removal)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>11:59</span><span class="status-icons">●●● 􀙇 78%</span></div>
+      <div class="screen-content app">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-inert>☰</button>
+          <span class="top-bar__title">साद · पार्टनर</span>
+          <button class="top-bar__icon-btn" data-inert>🔔</button>
+        </div>
+
+        <div class="strip">
+          <div class="chip" data-inert>
+            <span class="chip__label">कनेक्शन</span>
+            <span class="chip__value">12 <span class="chip__sub">(15)</span></span>
+          </div>
+          <div class="chip" data-inert>
+            <span class="chip__label">सेवा स्थिति</span>
+            <span class="chip__check">✓</span>
+          </div>
+          <div class="chip" data-inert>
+            <span class="chip__label">कमाई</span>
+            <span class="chip__value">₹4,250</span>
+          </div>
+          <div class="chip" data-inert>
+            <span class="chip__label">काम की स्थिति</span>
+            <span class="chip__check">✓</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 8px">
+          <div class="card" data-inert>
+            <div class="card__accent"></div>
+            <div class="card__body">
+              <div class="card__line1">
+                <span class="card__icon">🛠</span>
+                <span>रिस्टोर · #3104</span>
+                <span class="card__locality"> · द्वारका</span>
+              </div>
+              <div class="card__line2">
+                <span class="card__reason">कनेक्शन ने नया मुद्दा बताया</span>
+                <span class="card__timestamp">कल 2:15 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Archive expanded — install card still here but flagged for removal -->
+        <div class="archive-group is-open" id="archive">
+          <div class="archive-group__header" data-toggle="#archive">
+            <span style="font-size: 20px; flex-shrink: 0">⏳</span>
+            <span class="archive-group__title">अन्य काम</span>
+            <span class="archive-group__count">1</span>
+            <span class="archive-group__chevron">⌄</span>
+          </div>
+          <div class="archive-group__body">
+            <div class="card is-archived" data-goto="f2-5.html">
+              <div class="card__accent card__accent--archive"></div>
+              <div class="card__body">
+                <div class="card__line1">
+                  <span class="card__icon">🏠</span>
+                  <span>इंस्टॉलेशन · #4821</span>
+                  <span class="card__locality"> · सेक्टर 22</span>
+                  <span class="card__badge card__badge--warn">हट जाएगी</span>
+                </div>
+                <div class="card__line2">
+                  <span class="card__reason">3 दिन से जवाब नहीं · व्योम वापस ले रहा है</span>
+                  <span class="card__timestamp">अभी</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height: 80px"></div>
+        <div class="tap-hint">कार्ड पर टैप करें</div>
+      </div>
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>

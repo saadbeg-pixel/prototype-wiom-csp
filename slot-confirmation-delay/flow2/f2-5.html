@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>ड्रिल — बुकिंग हटाई जा रही है · Wiom CSP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../_common/tokens.css" />
+  <link rel="stylesheet" href="../_common/frame.css" />
+  <link rel="stylesheet" href="../_common/components.css" />
+  <style>
+    .drill-body { padding: 0 16px 24px; }
+    .timeline-row { display: flex; gap: 12px; padding: 8px 0; }
+    .timeline-row__text { flex: 1; font-size: var(--t-body-sm); color: var(--text-secondary); line-height: 18px; }
+    .timeline-row__time { font-size: var(--t-meta); color: var(--text-secondary); white-space: nowrap; }
+    .bonus-line {
+      margin-top: 12px; padding: 10px 12px;
+      background: var(--bg-positive); border-radius: 8px;
+      font-size: var(--t-body); color: var(--state-positive);
+      display: flex; align-items: center; gap: 8px; line-height: 18px;
+    }
+    .tap-hint {
+      position: absolute; bottom: 90px; left: 16px; right: 16px;
+      text-align: center; font-size: 11px; color: var(--text-secondary);
+      pointer-events: none; letter-spacing: 0.3px;
+    }
+    .tap-hint::before { content: "↓ "; color: var(--brand-primary); }
+  </style>
+</head>
+<body>
+  <div class="frame-hint">flow 2 · f2-5 — drilldown (about to remove)</div>
+  <div class="phone-bezel">
+    <div class="phone-notch"></div>
+    <div class="phone-screen">
+      <div class="status-bar light"><span>11:59</span><span class="status-icons">●●● 􀙇 78%</span></div>
+      <div class="screen-content app">
+
+        <div class="top-bar">
+          <button class="top-bar__icon-btn" data-goto="f2-6.html">←</button>
+          <span class="top-bar__title">इंस्टॉलेशन · #4821</span>
+          <button class="top-bar__icon-btn" data-inert>⋮</button>
+        </div>
+
+        <div class="drill-body">
+
+          <!-- Negative banner echoing the PN -->
+          <div class="banner banner--negative">
+            <div class="banner__icon-circle">⚠</div>
+            <div class="banner__body">
+              <div class="banner__title">यह बुकिंग जल्द हटा दी जाएगी</div>
+              <div class="banner__subtitle">3 दिन से कनेक्शन का कोई जवाब नहीं</div>
+            </div>
+          </div>
+
+          <div class="bonus-line">
+            <span>✓</span>
+            <span>आपके बोनस पर कोई असर नहीं · व्योम बुकिंग वापस ले रहा है</span>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">⊙</span>
+              <span class="section__title">अपडेट</span>
+            </div>
+            <div class="section__content">
+              <div class="timeline-row">
+                <span class="timeline-row__text">कनेक्शन से 3 दिन तक कोई जवाब नहीं</span>
+                <span class="timeline-row__time">आज</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">16 मई की आख़िरी कोशिश भी असफल</span>
+                <span class="timeline-row__time">आज सुबह</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">15 मई का स्लॉट निकल गया</span>
+                <span class="timeline-row__time">कल</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">14 मई का स्लॉट निकल गया</span>
+                <span class="timeline-row__time">परसों</span>
+              </div>
+              <div class="timeline-row">
+                <span class="timeline-row__text">13 मई का स्लॉट निकल गया</span>
+                <span class="timeline-row__time">3 दिन पहले</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">ⓘ</span>
+              <span class="section__title">आगे क्या?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__row-value">
+                व्योम यह बुकिंग अपने आप वापस ले लेगा। आप चाहें तो अभी
+                हटा सकते हैं — दोनों हालत में आपके बोनस पर असर नहीं होगा।
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section__header">
+              <span class="section__icon">📍</span>
+              <span class="section__title">कहाँ जाना था?</span>
+            </div>
+            <div class="section__content">
+              <div class="section__row-value">
+                G 69, मातामंदिर, तीसरी गली<br/>
+                सेक्टर 22, द्वारका, नई दिल्ली — 110077
+              </div>
+            </div>
+          </div>
+
+          <div style="height: 80px"></div>
+        </div>
+
+      </div>
+
+      <div class="tap-hint">अभी हटाने के लिए नीचे CTA दबाएँ</div>
+
+      <div class="cta-bar">
+        <button class="btn btn--primary btn--full" data-goto="f2-4.html">
+          हटा दो
+        </button>
+      </div>
+
+      <div class="nav-bar"><span class="pill"></span></div>
+    </div>
+  </div>
+  <script src="../_common/nav.js"></script>
+</body>
+</html>
