@@ -62,7 +62,6 @@
       label: "Intro",
       items: [
         { key: "index", name: "Cover · Problem statement", type: "yellow" },
-        { key: "context/c1", name: "Solution overview", type: "yellow" },
         { key: "context/idx", name: "Pick a flow", type: "yellow" }
       ]
     },

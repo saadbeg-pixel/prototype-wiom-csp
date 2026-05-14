@@ -35,8 +35,6 @@ When a CSP proposes a slot (e.g. May 13) and the customer doesn't respond, the s
 ```
 index.html                    ← problem statement
   ↓
-context/c1.html               ← solution overview (4 points)
-  ↓
 context/idx.html              ← pick a flow
   ↓
 [Flow 1 / 2 / 3]              ← all return to idx

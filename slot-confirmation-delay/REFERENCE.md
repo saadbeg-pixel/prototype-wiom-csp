@@ -289,7 +289,6 @@ slot-confirmation-delay/
 │   ├── frame.css      ← 360x800 mobile frame styling
 │   └── nav.js         ← simple click-to-next + back nav
 ├── context/
-│   ├── c1.html        ← solution overview
 │   ├── idx.html       ← flow index
 │   ├── f1-yc1.html ... f1-end.html (yellow context screens for Flow 1)
 │   ├── f2-yc1.html ... f2-end.html
