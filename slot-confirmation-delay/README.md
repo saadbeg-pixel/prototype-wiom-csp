@@ -26,9 +26,9 @@ When a CSP proposes a slot (e.g. May 13) and the customer doesn't respond, the s
 
 | # | Flow | Outcome |
 |---|---|---|
-| 1 | Customer responds (Day 2) | Card returns to active feed via PN |
-| 2 | Customer doesn't respond for 3 days | Booking removed cleanly |
-| 3 | Partner tries to cancel during the wait | Reassurance bottom sheet, then partner's choice |
+| 1 | Slot day expired and partner tries to cancel | Reassurance bottom sheet, then partner's choice |
+| 2 | Slot day expired and then connection responds | Card returns to active feed via PN |
+| 3 | Slot day expired and still connection doesn't respond | Booking removed cleanly |
 
 ## Walkthrough order (for review)
 
