@@ -292,7 +292,7 @@ slot-confirmation-delay/
 │   ├── idx.html       ← flow index
 │   ├── f1-yc1.html ... f1-end.html (yellow context screens for Flow 1)
 │   ├── f2-yc1.html ... f2-end.html
-│   └── f3-yc1.html ... f3-end.html
+│   └── f3-end.html (flow 3 starts directly in flow3/, no yellow intro)
 ├── flow1/             ← Flow 1 app screens (mobile-framed)
 │   ├── f1-1.html ... f1-8.html
 ├── flow2/             ← Flow 2 app screens

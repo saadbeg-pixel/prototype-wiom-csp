@@ -97,7 +97,6 @@
     {
       label: "Flow 3 — Partner cancel attempt",
       items: [
-        { key: "context/f3-yc1", name: "Setup · partner wants to cancel", type: "yellow" },
         { key: "flow3/f3-1", name: "Home · archive", type: "app" },
         { key: "flow3/f3-2", name: "Drilldown · kebab visible", type: "app" },
         { key: "flow3/f3-3", name: "Drilldown · kebab open", type: "app" },
