@@ -15,6 +15,7 @@ HTML lo-fi prototypes for the Wiom Partner (CSP) app. Each folder is one problem
 | Folder | Status | Notes |
 |---|---|---|
 | [slot-confirmation-delay](./slot-confirmation-delay) | Ready for review | 30 screens · 3 flows · open `index.html` |
+| [csp-750-recharge-education](./csp-750-recharge-education) | Draft | Spec · ₹750 recharge education before ISP account creation |
 
 ## Conventions
 

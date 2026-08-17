@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>₹750 claim — installation-flow education spec</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#161021; --soft:#3d3550; --muted:#665e75;
+    --line:#e8e4f0; --surface:#faf9fc; --brand:#d9008d; --brand-tint:#ffe5f6;
+    --warn-tint:#fff2bf; --code-bg:#f4f2f8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15121c; --fg:#efecf4; --soft:#cdc7d8; --muted:#a49cb4;
+      --line:#2e2839; --surface:#1c1826; --brand:#ff5ab8; --brand-tint:#3a1030;
+      --warn-tint:#3a3216; --code-bg:#221d2e;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15121c; --fg:#efecf4; --soft:#cdc7d8; --muted:#a49cb4;
+    --line:#2e2839; --surface:#1c1826; --brand:#ff5ab8; --brand-tint:#3a1030;
+    --warn-tint:#3a3216; --code-bg:#221d2e;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari",sans-serif;
+  }
+  .doc{max-width:760px;margin:0 auto;padding:48px 24px 96px}
+  h1{font-size:28px;line-height:1.25;margin:0 0 6px;text-wrap:balance}
+  .sub{color:var(--muted);margin:0 0 8px}
+  .meta{color:var(--muted);font-size:13px;margin:0 0 36px}
+  h2{font-size:19px;margin:40px 0 12px}
+  p{margin:0 0 12px;color:var(--soft)}
+  ul{margin:0 0 12px;padding-left:20px;color:var(--soft)}
+  li{margin-bottom:8px}
+  strong{color:var(--fg)}
+  code{
+    font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:.88em;
+    background:var(--code-bg);border:1px solid var(--line);border-radius:4px;padding:1px 5px;
+  }
+  hr{border:none;border-top:1px solid var(--line);margin:0}
+  .callout{
+    background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brand);
+    border-radius:8px;padding:14px 16px;margin:0 0 14px;
+  }
+  .callout.warn{border-left-color:#e2b203;background:var(--warn-tint)}
+  .callout p:last-child{margin-bottom:0}
+  .tablewrap{overflow-x:auto;margin:0 0 14px}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th,td{text-align:left;vertical-align:top;padding:9px 12px;border:1px solid var(--line)}
+  th{background:var(--surface);color:var(--fg)}
+  td{color:var(--soft)}
+  .copy{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:0 0 14px}
+  .copy .lang{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+  .copy p{margin:0 0 10px}
+  .copy p:last-child{margin-bottom:0}
+  .tag{
+    display:inline-block;font-size:12px;font-weight:700;border-radius:5px;
+    padding:2px 7px;background:var(--brand-tint);color:var(--brand);vertical-align:2px;
+  }
+</style>
+
+<div class="doc">
+
+<h1>₹750 claim — installation-flow education spec</h1>
+<p class="sub">Reminding the CSP that this connection needs a 3-month ISP recharge, at the point where it can still change what he does.</p>
+<p class="meta">Project Dominance · opted-in CSPs only · v1</p>
+
+<hr>
+
+<h2>1. What changes</h2>
+<p>An education screen tells the CSP that this connection needs a <strong>3-month (90-day) ISP recharge</strong> — the condition he accepted when he opted into the new payout structure — and that the recharge has to be photographed and submitted to claim <strong>₹750</strong>.</p>
+<p>It replaces the current brief, which today says <strong>30 दिन</strong>. For an opted-in CSP that screen instructs exactly the behaviour that fails his claim, so this is a correction, not an addition.</p>
+
+<h2>2. Where it goes</h2>
+<ul>
+  <li><strong>Immediately before the “Create ISP Account” option</strong> in the installation flow. Marked <span class="tag">New</span> on the Figma board.</li>
+  <li>The same composable is currently rendered twice — as an overlay on s11 and again as the s15 route after the method sheet. Only the <strong>first</strong> one matters: choosing “खुद से, पोर्टल पर” opens the ISP portal immediately, so anything shown after that is too late to change the recharge duration.</li>
+  <li><strong>Opted-in CSPs only.</strong> Everyone else keeps the existing 30-day brief.</li>
+</ul>
+
+<h2>3. Copy</h2>
+<div class="copy">
+  <p class="lang">Hindi</p>
+  <p><strong>इस कनेक्शन पर मिलेंगे — ₹{amount}</strong></p>
+  <p>{duration} का रिचार्ज करने पर</p>
+  <p>आपने यही तरीका चुना है, इस कनेक्शन का ISP रिचार्ज {deadline} तक के लिए करना है</p>
+  <p>मैंने समझ लिया है, इस सेटअप में {days} दिन, 100 Mbps का ISP रिचार्ज करना है</p>
+</div>
+<div class="copy">
+  <p class="lang">English</p>
+  <p><strong>You get on this connection — ₹{amount}</strong></p>
+  <p>for a {duration} recharge</p>
+  <p>You chose this structure — recharge this connection’s ISP plan up to {deadline}</p>
+  <p>I understand this setup needs a {days}-day, 100 Mbps ISP recharge</p>
+</div>
+<p>The last line is an acknowledge checkbox and stays in first person in both languages.</p>
+
+<h2>4. Every number comes from the backend</h2>
+<div class="callout">
+  <p><strong>The amount, the duration and the deadline date must not be hard-coded in the app.</strong> They change per CSP and will change again as the policy evolves — none of that should need an app release or wait on store rollout.</p>
+</div>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Value</th><th>Example</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td><code>payout_amount</code></td><td>750</td><td>Per CSP. Rendered with the ₹ symbol by the app, not sent as a formatted string.</td></tr>
+    <tr><td><code>required_recharge_days</code></td><td>90</td><td>Per CSP. Drives both “3 महीने” and “90 दिन” — see below.</td></tr>
+    <tr><td><code>required_recharge_until</code></td><td>2026-11-17</td><td>ISO date, <strong>computed server-side</strong> from the install date + duration. The app must not do this arithmetic.</td></tr>
+    <tr><td><code>is_opted_in</code></td><td>true</td><td>Gates the whole screen. False → existing 30-day brief.</td></tr>
+  </tbody>
+</table>
+</div>
+<ul>
+  <li><strong>Duration is sent once, displayed two ways.</strong> The app derives “3 महीने / 3-month” from <code>required_recharge_days</code>. Sending both a months string and a days number invites them to drift apart.</li>
+  <li><strong>The deadline is a date, not a duration.</strong> “17 Nov 2026” is checkable against what his ISP portal shows; “90 days” makes him do the arithmetic.</li>
+  <li><strong>Fail closed.</strong> If any of these fields is missing, do not fall back to a default — show the non-opted-in brief instead. A wrong number here costs the CSP a real claim, so no number is safer than a stale one.</li>
+  <li>The same values feed the claim popup, the drilldown and the rejection screens. One source, every surface.</li>
+</ul>
+<div class="callout warn">
+  <p><strong>Audio dependency.</strong> This screen plays <code>isp_recharge.mp3</code>, which says 30 days. Backend-driven text with a hard-coded voice track is worse than either alone — the audio needs re-recording, or muting for opted-in CSPs, before release.</p>
+</div>
+
+<h2>5. Screens to remove</h2>
+<p>Some education screens in the installation journey are no longer relevant and should be dropped. Each is marked <span class="tag">Remove</span> on the Figma board; some are already gone, ignore those.</p>
+
+<h2>6. Open</h2>
+<ul>
+  <li>Attempt cap on proof re-submission, and what happens after the last failed attempt.</li>
+  <li>CSP-facing name for the policy — the copy currently describes it rather than naming it.</li>
+  <li><code>trackPaygAcknowledged()</code> currently fires from the s15 route. If that screen is dropped, the event moves to the overlay’s acknowledge tap.</li>
+</ul>
+
+</div>
+</html>
